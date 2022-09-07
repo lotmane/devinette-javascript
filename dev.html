@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+   
+ 
+    <script>
+        /* 
+        Activité : jeu de devinette
+        */
+        
+        // NE PAS MODIFIER OU SUPPRIMER LES LIGNES CI-DESSOUS
+        // COMPLETEZ LE PROGRAMME UNIQUEMENT APRES LE TODO
+        
+        console.log("Bienvenue dans ce jeu de devinette !");
+        
+        // Cette ligne génère aléatoirement un nombre entre 1 et 100
+         var solution = Math.floor(Math.random() * 100) + 1;
+          // var solution = 12;
+        
+        // Décommentez temporairement cette ligne pour mieux vérifier le programme
+         //console.log("(La solution est " + solution + ")");
+        
+        // TODO : complétez le programme
+           
+
+            for(var i = 1; i < 7; i++){
+                var valeur_saisi = prompt('Veuillez saisir une valeur comprise entre 0 et 100 \n\n Vous avez 6 tentatives');
+                //La condition qui justifie
+                if (valeur_saisi == solution){
+                    alert("Félicitation vous avez réussi, la réponse est bien " + solution);
+                    console.log("Félicitation vous avez réussi, la réponse est bien la réponse est bien " + solution );
+                    break;
+                }
+                else
+                {
+                     // Condition si le nombre saisi est inferieur a la solution
+                    if(valeur_saisi < solution)
+                    {
+                        alert("Le nombre que vous avez saisi est trop petit \n Nombre de tentatives que vous avez fait est de ".concat(i));
+                        console.log("Le nombre que vous avez saisi est trop petit ");
+                            if(i == 6)
+                            {
+                                alert("Vous avez épuisé le nombre de tentative");
+                                console.log("Vous avez épuisé le nombre de tentative");
+                            }
+                    }
+                      // Condition si le nombre saisi est inferieur a la solution
+                    else
+                    {
+                        alert("Le nombre que avez saisi est trop grand \n Nombre de tentatives que vous avez fait est de ".concat(i));
+                        console.log("Le nombre que avez saisi est trop grand ")
+                            if(i == 6)
+                            {
+                                    alert("Vous avez épuisé le nombre de tentative");
+                                    console.log("GAME OVER !");
+                            }
+                    }
+                }
+            }
+</script>
+</body>
+</html>
